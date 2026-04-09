@@ -244,3 +244,95 @@ body {
 .trend--neutral {
   color: var(--grey);
 }
+/* ── Content row ── */
+.content-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+/* Tarjetas */
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+/* ── Tabla ── */
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.project-table th,
+.project-table td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-table thead th {
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--bg);
+}
+
+.project-table tbody tr:hover {
+  background: #f0f7fa;
+}
+
+/* ── Badges ── */
+.badge {
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.badge--active {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.badge--review {
+  background: #fff8e1;
+  color: #f57f17;
+}
+
+.badge--done {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* ── Lista de actividad ── */
+.activity-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.88rem;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+/* pseudo-elemento */
+.activity-item::before {
+  content: "› ";
+  color: var(--secondary);
+  font-weight: 700;
+}
