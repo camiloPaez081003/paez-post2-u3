@@ -183,3 +183,64 @@ body {
   font-size: 0.8rem;
   font-weight: 700;
 }
+/* ── Main ── */
+.dashboard-main {
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+/* ── Stats row (GRID RESPONSIVO) ── */
+.stats-row {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+
+  margin-bottom: 1.5rem;
+}
+
+/* Tarjetas */
+.stat-card {
+  background: var(--white);
+  border-radius: var(--radius);
+
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  border-top: 3px solid var(--primary);
+}
+
+/* Texto */
+.stat-card__label {
+  font-size: 0.8rem;
+  color: var(--grey);
+  text-transform: uppercase;
+}
+
+.stat-card__value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.stat-card__trend {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Colores */
+.trend--up {
+  color: #2e7d32;
+}
+
+.trend--down {
+  color: #c62828;
+}
+
+.trend--neutral {
+  color: var(--grey);
+}
