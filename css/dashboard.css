@@ -62,3 +62,64 @@ body {
 .dashboard-main {
   grid-area: main;
 }
+/* ── Sidebar ── */
+.sidebar {
+  background: var(--dark);
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+}
+
+/* Marca */
+.sidebar__brand {
+  padding: 0 1.25rem;
+  height: var(--topbar-h);
+
+  display: flex;
+  align-items: center;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Navegación */
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+
+  padding: 1rem 0;
+  gap: 0.25rem;
+}
+
+/* Links */
+.nav-link {
+  display: block;
+  padding: 0.65rem 1.25rem;
+
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.9rem;
+
+  transition:
+    background 0.15s,
+    color 0.15s;
+  border-left: 3px solid transparent;
+}
+
+/* Hover */
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+}
+
+/* Activo */
+.nav-link--active {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  border-left-color: var(--secondary);
+}
