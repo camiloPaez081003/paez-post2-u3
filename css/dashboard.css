@@ -1,0 +1,64 @@
+/* ── Reset y variables ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --sidebar-w: 220px;
+  --topbar-h: 60px;
+
+  --primary: #c62828;
+  --secondary: #e53935;
+  --dark: #8e0000;
+
+  --bg: #f5f5f5;
+  --white: #ffffff;
+  --text: #000000;
+  --grey: #808080;
+  --border: #cccccc;
+
+  --radius: 6px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Base */
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ── GRID PRINCIPAL ── */
+.app-layout {
+  display: grid;
+  min-height: 100vh;
+
+  grid-template-columns: var(--sidebar-w) 1fr;
+  grid-template-rows: var(--topbar-h) 1fr;
+
+  grid-template-areas:
+    "sidebar topbar"
+    "sidebar main";
+}
+
+/* Asignación de áreas */
+.sidebar {
+  grid-area: sidebar;
+}
+
+.topbar {
+  grid-area: topbar;
+}
+
+.dashboard-main {
+  grid-area: main;
+}
